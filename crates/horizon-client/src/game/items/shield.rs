@@ -332,7 +332,7 @@ impl Game<'_> {
                         .get(&stack.item)
                         .and_then(|i| i.use_cooldown.clone());
                     let group = horizon_client::cooldowns::group(stack, default.as_ref());
-                    self.add_cooldown(group, ticks as i32);
+                    self.add_cooldown(group, 0);
                 }
             }
             self.stop_active_item_use();
