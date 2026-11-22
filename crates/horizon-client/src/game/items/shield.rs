@@ -322,7 +322,7 @@ impl Game<'_> {
                 self.native_player_item_cooldown(player, &name, &item, ticks as i32, &mut cancel);
             }
             if !cancel {
-                self.shield_cooldown = ticks;
+                self.shield_cooldown = 0;
                 // ItemCooldowns.addCooldown(stack, ticks) on the shield's group: a guest is
                 // sent it (ServerItemCooldowns), which keeps the shield down on their screen,
                 // and the 0 that ends it.
